@@ -6,10 +6,7 @@
       "#以下三行是GitHub网站，为了不影响下载速度走代理",
       "github.com",
       "githubassets.com",
-      "githubusercontent.com",
-      "#GFW域名列表",
-      "geosite:gfw",
-      "geosite:greatfire"
+      "githubusercontent.com"
     ]
   },
   {
@@ -50,6 +47,20 @@
       "geosite:apple",
       "#下一行包含所有广告平台、提供商域名",
       "geosite:category-ads-all",
+      "#下一行包含可直连访问谷歌网址，需要替换为加强版GEO文件，如已手动更新为加强版GEO文件，删除此行前面的#号使其生效",
+      "#geosite:google-cn",
+      "#下一行包含可直连访问苹果网址，需要替换为加强版GEO文件，如已手动更新为加强版GEO文件，删除此行前面的#号使其生效",
+      "#geosite:apple-cn"
+    ]
+  },
+  {
+    "type": "field",
+    "inboundTag": [],
+    "outboundTag": "proxy",
+    "domain": [
+      "#GFW域名列表",
+      "geosite:gfw",
+      "geosite:greatfire"
     ]
   },
   {
