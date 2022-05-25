@@ -1,0 +1,37 @@
+<html>
+
+<head></head>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<script>
+    var content;
+    window.onload = function () {
+        var xhr = new XMLHttpRequest(); // 创建xhr对象
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+                    content = xhr.responseText;
+                } else {
+                    alert("错误码：" + xhr.status);
+                }
+            }
+
+        }
+        // var url = 'https://raw.iqiq.io/freefq/free/master/v2';
+        // var url=getQueryVariable("subsurl")
+        var locationurl = window.location.href
+        var url = locationurl.split("#bf=")[1].toString();
+        xhr.open('get', url, false);
+        xhr.send();
+        var jiema = window.decodeURI(atob(content));
+        console.log(jiema.split(/\r?\n/));
+    }
+
+
+</script>
+
+<body>
+    123
+</body>
+
+</html>
